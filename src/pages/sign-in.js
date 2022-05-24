@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Head from "next/head";
 
 import global from "../styles/global";
 
@@ -80,6 +81,9 @@ export default function SignIn() {
         alignItems: "Center",
       }}
     >
+      <Head>
+        <title>Sign-in</title>
+      </Head>
       <Box>
         <Typography variant="h5"> Please Sign In</Typography>
       </Box>

@@ -1,6 +1,9 @@
 import { Box, Button, Paper, TextField, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import global from "../styles/global";
+import Head from "next/head";
+
+
 export default function SignIn() {
   const router = useRouter();
 
@@ -21,6 +24,9 @@ export default function SignIn() {
         alignItems: "Center",
       }}
     >
+      <Head>
+        <title>Register</title>
+      </Head>
       <Box>
         <Typography variant="h5">Create New Account</Typography>
       </Box>

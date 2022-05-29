@@ -71,7 +71,7 @@ export default function SignIn() {
             onClick={() => router.push("/sign-in")}
             sx={style.linkStyle}
           >
-            Sign in
+            Already have account? Sign in
           </Typography>
         </Box>
       </Paper>

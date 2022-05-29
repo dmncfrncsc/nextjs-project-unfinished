@@ -2,7 +2,13 @@ import { createTheme } from "@mui/material";
 import { lineHeight } from "@mui/system";
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
+    primary: {
+      main:"#3A3845"
+    },
+    secondary:{
+      main:"#F7CCAC"
+    }
   },
 
   typography: {

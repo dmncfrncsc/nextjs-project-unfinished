@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Avatar,
   Box,
   ButtonBase,
   Divider,
@@ -10,6 +11,7 @@ import {
   ListItemIcon,
   ListItemText,
   Toolbar,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import Head from "next/head";
@@ -17,15 +19,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
 
-  const [open,setOpen]= useState(false);
-
-  const setDrawerOpen= () => {
+  const setDrawerOpen = () => {
     setOpen(true);
-  }
-  const handleClose= () =>{
+  };
+  const handleClose = () => {
     setOpen(false);
-  }
+  };
 
   return (
     <Box>
@@ -52,9 +53,26 @@ export default function Home() {
 
       <Drawer anchor="left" open={open} onClose={handleClose}>
         <Box
-          sx={{ minWidth: "200px", display: "flex", flexDirection: "column" }}
+          sx={{
+            minWidth: "200px",
+            display: "flex",
+            height: "100vh",
+            flexDirection: "column",
+          }}
         >
-          <List sx={{ marginTop: "55px" }}>
+          <Box sx={{ padding: "12px", display: "flex" }}>
+            <Avatar />
+            <Box sx={{ marginLeft: "8px" }}>
+              <Tooltip title="dominic.m.francisco@gmail.com">
+                <Typography color="primary" noWrap sx={{ maxWidth: "150px" }}>
+                  dominic.m.francisco@gmail.com
+                </Typography>
+              </Tooltip>
+
+              <Typography color="secondary">Admin</Typography>
+            </Box>
+          </Box>
+          <List sx={{ flexGrow: "1" }}>
             <Divider />
             <ListItem button>
               <ListItemIcon>
@@ -67,6 +85,7 @@ export default function Home() {
               </ListItemIcon>
               <ListItemText primary="Users" />
             </ListItem>
+
             <ListItem button>
               <ListItemIcon>
                 <Image
@@ -78,6 +97,7 @@ export default function Home() {
               </ListItemIcon>
               <ListItemText primary="Products" />
             </ListItem>
+
             <ListItem button>
               <ListItemIcon>
                 <Image
@@ -89,9 +109,11 @@ export default function Home() {
               </ListItemIcon>
               <ListItemText primary="Sales" />
             </ListItem>
+          </List>
 
+          <List>
             <Divider />
-            <ListItem>
+            <ListItem button>
               <ListItemIcon>
                 <Image
                   src="/assets/svg/logout.svg"
@@ -100,7 +122,7 @@ export default function Home() {
                   height={20}
                 ></Image>
               </ListItemIcon>
-              <ListItemText>Logout</ListItemText>
+              <ListItemText>Sign out</ListItemText>
             </ListItem>
           </List>
         </Box>

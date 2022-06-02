@@ -8,6 +8,15 @@ const theme = createTheme({
     },
     secondary:{
       main:"#F7CCAC"
+    },
+    dashboard:{
+      bg1: "#143F68",
+      bg2: "#F55353",
+      bg3: "#FEB139",
+    },
+    text :{
+      t1:"#000",
+      t2: "#fff",
     }
   },
 

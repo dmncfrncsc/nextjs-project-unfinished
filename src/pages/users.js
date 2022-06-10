@@ -20,7 +20,7 @@ export default function Users() {
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Image
           src="/assets/svg/users.svg"
-          alt="Dashboard Image"
+          alt="Users Image"
           width={40}
           height={40}
         />
@@ -196,13 +196,17 @@ export default function Users() {
           justifyContent: "center",
         }}
       >
-        <Button variant="contained" sx={{ width: "100px" }} color="success">
+        <Button
+          variant="contained"
+          sx={{ width: "150px", height: "50px" }}
+          color="success"
+        >
           Add
         </Button>
 
         <Button
           variant="contained"
-          sx={{ marginLeft: "80px", width: "100px" }}
+          sx={{ marginLeft: "80px", width: "150px", height: "50px" }}
           color="error"
         >
           Delete
@@ -210,7 +214,7 @@ export default function Users() {
 
         <Button
           variant="contained"
-          sx={{ marginLeft: "80px", width: "100px" }}
+          sx={{ marginLeft: "80px", width: "150px", height: "50px" }}
           color="warning"
         >
           Modify

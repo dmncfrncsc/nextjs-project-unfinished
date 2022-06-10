@@ -140,7 +140,11 @@ export default function AdminLayout({ children }) {
               <ListItemText primary="Products" />
             </ListItem>
 
-            <ListItem button>
+            <ListItem
+              button
+              onClick={() => goToPage("/sales")}
+              selected={router.pathname.includes("sales")}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/sales.svg"

@@ -18,7 +18,14 @@ export default function Home() {
 
   if (isLoading || !isAuth) {
     return (
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          justifyItems: "center",
+        }}
+      >
         <CircularProgress />
       </Box>
     );

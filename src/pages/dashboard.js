@@ -1,6 +1,16 @@
 import React from "react";
 import AdminLayout from "../components/AdminLayout";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Paper,
+  Typography,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@mui/material";
 import Image from "next/image";
 export default function Dashboard() {
   const style = {
@@ -35,6 +45,7 @@ export default function Dashboard() {
           Dashboard
         </Typography>
       </Box>
+
       <Grid container spacing={2} sx={{ marginTop: "12px" }}>
         <Grid item xs={12} sm>
           <Paper sx={style.paper1}>
@@ -42,7 +53,7 @@ export default function Dashboard() {
               Users
             </Typography>
             <Typography variant="h1" sx={style.text1}>
-              100
+              03
             </Typography>
           </Paper>
         </Grid>
@@ -53,21 +64,85 @@ export default function Dashboard() {
               Products
             </Typography>
             <Typography variant="h1" sx={style.text1}>
-              100
+              05
             </Typography>
           </Paper>
         </Grid>
+
         <Grid item xs={12} sm>
           <Paper sx={style.paper3}>
             <Typography variant="h3" color={(theme) => theme.palette.text.t2}>
               Product Low on Stock
             </Typography>
             <Typography variant="h1" sx={style.text1}>
-              15
+              02
             </Typography>
           </Paper>
         </Grid>
       </Grid>
+
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "50px",
+        }}
+      >
+        <Paper
+          elevation={4}
+          sx={{
+            width: "50vw",
+            height: "35vh",
+            padding: "20px",
+          }}
+        >
+          <Typography
+            variant="h1"
+            sx={{ textAlign: "center", marginBottom: "5px" }}
+          >
+            Recent Transactions
+          </Typography>
+          <Table
+            sx={{ maxWidth: "700", border: "2px solid black" }}
+            size="small"
+            aria-label="a dense table"
+          >
+            <TableHead sx={{ border: "2px solid black" }}>
+              <TableRow>
+                <TableCell align="center"> Product Name</TableCell>
+                <TableCell align="center"> Quantity</TableCell>
+                <TableCell align="center"> Price</TableCell>
+                <TableCell align="center"> Total</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody sx={{ border: "2px solid black" }}>
+              <TableCell align="center"> Hansel </TableCell>
+              <TableCell align="center"> 5 </TableCell>
+              <TableCell align="center"> 48 </TableCell>
+              <TableCell align="center"> 240 </TableCell>
+            </TableBody>
+            <TableBody sx={{ border: "2px solid black" }}>
+              <TableCell align="center"> Rebisco </TableCell>
+              <TableCell align="center"> 2 </TableCell>
+              <TableCell align="center"> 48 </TableCell>
+              <TableCell align="center"> 96 </TableCell>
+            </TableBody>
+            <TableBody sx={{ border: "2px solid black" }}>
+              <TableCell align="center"> Magic Flakes </TableCell>
+              <TableCell align="center"> 10 </TableCell>
+              <TableCell align="center"> 35 </TableCell>
+              <TableCell align="center"> 350 </TableCell>
+            </TableBody>
+            <TableBody sx={{ border: "2px solid black" }}>
+              <TableCell align="center"> Combi </TableCell>
+              <TableCell align="center"> 6 </TableCell>
+              <TableCell align="center"> 45 </TableCell>
+              <TableCell align="center"> 270 </TableCell>
+            </TableBody>
+          </Table>
+        </Paper>
+      </Box>
     </Box>
   );
 }

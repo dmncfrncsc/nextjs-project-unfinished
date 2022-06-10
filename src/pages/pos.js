@@ -162,297 +162,333 @@ export default function Pos() {
       </Box>
 
       {/* Total, Amount, Change, Delete, Confirm */}
-      <Grid container>
-        <Grid item>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "80px",
-            }}
-          >
-            <Box>
-              <Typography variant="h3" sx={{ marginBottom: "10px" }}>
-                Total
-              </Typography>
-              <TextField
-                id="total"
-                name="total"
-                type="number"
-                InputProps={{
-                  readOnly: true,
-                }}
-                variant="outlined"
-              />
-            </Box>
-
-            <Button
-              variant="contained"
-              sx={{ marginLeft: "80px", width: "100px" }}
-              color="error"
+      <Paper
+        elevation={4}
+        sx={{
+          height: "20vw",
+          width: "93vw",
+          marginLeft: "60px",
+          padding: "10px",
+        }}
+      >
+        <Grid container>
+          <Grid item>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "40px",
+              }}
             >
-              Delete
-            </Button>
-          </Box>
+              <Box>
+                <Typography variant="h3" sx={{ marginBottom: "10px" }}>
+                  Total
+                </Typography>
+                <TextField
+                  id="total"
+                  name="total"
+                  type="number"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                  variant="outlined"
+                />
+              </Box>
 
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "80px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
-                sx={{ marginBottom: "10px", marginTop: "10px" }}
+              <Button
+                variant="contained"
+                sx={{ marginLeft: "80px", width: "100px", height: "50px" }}
+                color="error"
               >
-                Amount
-              </Typography>
-              <TextField id="amt" name="amt" type="amount" variant="outlined" />
+                Delete
+              </Button>
             </Box>
 
-            <Button
-              variant="contained"
-              sx={{ marginLeft: "80px", width: "100px" }}
-              color="success"
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "40px",
+              }}
             >
-              Confirm
-            </Button>
-          </Box>
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{ marginBottom: "10px", marginTop: "10px" }}
+                >
+                  Amount
+                </Typography>
+                <TextField
+                  id="amt"
+                  name="amt"
+                  type="amount"
+                  variant="outlined"
+                />
+              </Box>
 
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "80px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
-                sx={{ marginBottom: "10px", marginTop: "10px" }}
+              <Button
+                variant="contained"
+                sx={{ marginLeft: "80px", width: "100px", height: "50px" }}
+                color="success"
               >
-                Change
-              </Typography>
-              <TextField
-                id="change"
-                name="change"
-                type="number"
-                InputProps={{
-                  readOnly: true,
-                }}
-                variant="outlined"
-              />
+                Confirm
+              </Button>
             </Box>
-          </Box>
-        </Grid>
 
-        {/* P Code, P Price, Add */}
-        <Grid item>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "120px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
-                sx={{
-                  marginBottom: "10px",
-                  marginTop: "10px",
-                  textAlign: "center",
-                }}
-              >
-                Product Code
-              </Typography>
-              <TextField
-                id="pcode"
-                name="pcode"
-                type="text"
-                InputProps={{
-                  readOnly: true,
-                }}
-                variant="outlined"
-              />
-            </Box>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "120px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
-                sx={{
-                  marginBottom: "10px",
-                  marginTop: "10px",
-                  textAlign: "center",
-                }}
-              >
-                Product Price
-              </Typography>
-              <TextField
-                id="pprice"
-                name="pprice"
-                type="amount"
-                InputProps={{
-                  readOnly: true,
-                }}
-                variant="outlined"
-              />
-            </Box>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "40px",
-            }}
-          >
-            <Button
-              variant="contained"
-              sx={{ marginLeft: "80px", width: "215px", marginTop: "35px" }}
-              color="success"
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "40px",
+              }}
             >
-              Add
-            </Button>
-          </Box>
-        </Grid>
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{ marginBottom: "10px", marginTop: "10px" }}
+                >
+                  Change
+                </Typography>
+                <TextField
+                  id="change"
+                  name="change"
+                  type="number"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                  variant="outlined"
+                />
+              </Box>
+            </Box>
+          </Grid>
 
-        {/* Search */}
-        <Grid item>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "120px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
+          {/* P Code, P Price, Add */}
+          <Grid item>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "200px",
+              }}
+            >
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    marginBottom: "10px",
+                    marginTop: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  Product Code
+                </Typography>
+                <TextField
+                  id="pcode"
+                  name="pcode"
+                  type="text"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                  variant="outlined"
+                />
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "200px",
+              }}
+            >
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    marginBottom: "10px",
+                    marginTop: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  Product Price
+                </Typography>
+                <TextField
+                  id="pprice"
+                  name="pprice"
+                  type="amount"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                  variant="outlined"
+                />
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "120px",
+              }}
+            >
+              <Button
+                variant="contained"
                 sx={{
-                  marginBottom: "10px",
-                  textAlign: "center",
+                  marginLeft: "80px",
+                  width: "215px",
+                  marginTop: "35px",
+                  height: "50px",
                 }}
+                color="success"
+              >
+                Add
+              </Button>
+            </Box>
+          </Grid>
+
+          {/* Search */}
+          <Grid item>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "50px",
+                marginTop: "9px",
+              }}
+            >
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    marginBottom: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  Search
+                </Typography>
+                <TextField
+                  id="search"
+                  name="search"
+                  type="text"
+                  variant="outlined"
+                  sx={{ width: "250px" }}
+                />
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "40px",
+              }}
+            >
+              <Button
+                variant="contained"
+                sx={{
+                  marginLeft: "13px",
+                  width: "250px",
+                  marginTop: "35px",
+                  height: "50px",
+                }}
+                color="warning"
               >
                 Search
-              </Typography>
-              <TextField
-                id="search"
-                name="search"
-                type="text"
-                variant="outlined"
-                sx={{ width: "250px" }}
-              />
+              </Button>
             </Box>
-          </Box>
+          </Grid>
 
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "40px",
-            }}
-          >
-            <Button
-              variant="contained"
-              sx={{ marginLeft: "80px", width: "250px", marginTop: "35px" }}
-              color="warning"
+          {/* P Name, Quantity, Clear */}
+          <Grid item>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "50px",
+              }}
             >
-              Search
-            </Button>
-          </Box>
-        </Grid>
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    marginBottom: "10px",
+                    marginTop: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  Product Name
+                </Typography>
+                <TextField
+                  id="pname"
+                  name="pname"
+                  type="text"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                  variant="outlined"
+                />
+              </Box>
+            </Box>
 
-        {/* P Name, Quantity, Clear */}
-        <Grid item>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "80px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginLeft: "50px",
+              }}
+            >
+              <Box>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    marginBottom: "10px",
+                    marginTop: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  Quantity
+                </Typography>
+                <TextField
+                  id="qty"
+                  name="qty"
+                  type="amount"
+                  variant="outlined"
+                />
+              </Box>
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <Button
+                variant="contained"
                 sx={{
-                  marginBottom: "10px",
-                  marginTop: "10px",
-                  textAlign: "center",
+                  marginLeft: "50px",
+                  width: "215px",
+                  marginTop: "35px",
+                  height: "50px",
                 }}
               >
-                Product Name
-              </Typography>
-              <TextField
-                id="pname"
-                name="pname"
-                type="text"
-                InputProps={{
-                  readOnly: true,
-                }}
-                variant="outlined"
-              />
+                Confirm
+              </Button>
             </Box>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              marginLeft: "80px",
-            }}
-          >
-            <Box>
-              <Typography
-                variant="h3"
-                sx={{
-                  marginBottom: "10px",
-                  marginTop: "10px",
-                  textAlign: "center",
-                }}
-              >
-                Quantity
-              </Typography>
-              <TextField id="qty" name="qty" type="amount" variant="outlined" />
-            </Box>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <Button
-              variant="contained"
-              sx={{ marginLeft: "80px", width: "215px", marginTop: "35px" }}
-            >
-              Confirm
-            </Button>
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </Paper>
     </Box>
   );
 }

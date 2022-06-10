@@ -14,18 +14,18 @@ import {
 import AdminLayout from "../components/AdminLayout";
 import Image from "next/image";
 
-export default function Products() {
+export default function Sales() {
   return (
     <Box sx={{ padding: "0 24px" }}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Image
-          src="/assets/svg/box.svg"
-          alt="Products Image"
+          src="/assets/svg/sales.svg"
+          alt="Sales Image"
           width={40}
           height={40}
         />
         <Typography variant="h1" sx={{ marginLeft: "12px" }}>
-          Products
+          Sales
         </Typography>
       </Box>
       <Box
@@ -50,7 +50,7 @@ export default function Products() {
                   marginBottom: "20px",
                 }}
               >
-                Product Details
+                Transaction History
               </Typography>
               <Table
                 sx={{ maxWidth: "700", border: "2px solid black" }}
@@ -59,48 +59,46 @@ export default function Products() {
               >
                 <TableHead sx={{ border: "2px solid black" }}>
                   <TableRow>
-                    <TableCell align="center"> Product ID</TableCell>
                     <TableCell align="center"> Product Name</TableCell>
-                    <TableCell align="center"> Price</TableCell>
                     <TableCell align="center"> Quantity</TableCell>
+                    <TableCell align="center"> Price</TableCell>
+                    <TableCell align="center"> Total</TableCell>
+                    <TableCell align="center"> Date Bought</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody sx={{ border: "2px solid black" }}>
-                  <TableCell align="center"> 001 </TableCell>
                   <TableCell align="center"> Hansel </TableCell>
+                  <TableCell align="center"> 5 </TableCell>
                   <TableCell align="center"> 48 </TableCell>
-                  <TableCell align="center"> 30 </TableCell>
+                  <TableCell align="center"> 240 </TableCell>
+                  <TableCell align="center"> June 8, 2022</TableCell>
                 </TableBody>
                 <TableBody sx={{ border: "2px solid black" }}>
-                  <TableCell align="center"> 002 </TableCell>
                   <TableCell align="center"> Rebisco </TableCell>
+                  <TableCell align="center"> 2 </TableCell>
                   <TableCell align="center"> 48 </TableCell>
-                  <TableCell align="center"> 25 </TableCell>
+                  <TableCell align="center"> 96 </TableCell>
+                  <TableCell align="center"> June 9, 2022</TableCell>
                 </TableBody>
                 <TableBody sx={{ border: "2px solid black" }}>
-                  <TableCell align="center"> 003 </TableCell>
                   <TableCell align="center"> Magic Flakes </TableCell>
+                  <TableCell align="center"> 10 </TableCell>
                   <TableCell align="center"> 35 </TableCell>
-                  <TableCell align="center"> 38 </TableCell>
+                  <TableCell align="center"> 350 </TableCell>
+                  <TableCell align="center"> June 10, 2022</TableCell>
                 </TableBody>
                 <TableBody sx={{ border: "2px solid black" }}>
-                  <TableCell align="center"> 004 </TableCell>
                   <TableCell align="center"> Combi </TableCell>
+                  <TableCell align="center"> 6 </TableCell>
                   <TableCell align="center"> 45 </TableCell>
-                  <TableCell align="center"> 40 </TableCell>
-                </TableBody>
-                <TableBody>
-                  <TableCell align="center"> 005 </TableCell>
-                  <TableCell align="center"> Fita </TableCell>
-                  <TableCell align="center"> 56 </TableCell>
-                  <TableCell align="center"> 30 </TableCell>
+                  <TableCell align="center"> 270 </TableCell>
+                  <TableCell align="center"> June 10, 2022</TableCell>
                 </TableBody>
               </Table>
             </Paper>
           </Grid>
         </Grid>
       </Box>
-
       <Box
         sx={{
           display: "flex",
@@ -113,9 +111,13 @@ export default function Products() {
         <Box>
           <Typography
             variant="h3"
-            sx={{ marginLeft: "70px", marginBottom: "10px" }}
+            sx={{
+              marginLeft: "70px",
+              marginBottom: "10px",
+              textAlign: "center",
+            }}
           >
-            Product ID
+            From
           </Typography>
 
           <TextField
@@ -126,97 +128,45 @@ export default function Products() {
             variant="outlined"
           />
         </Box>
-
         <Box>
           <Typography
             variant="h3"
-            sx={{ marginLeft: "70px", marginBottom: "10px" }}
+            sx={{
+              marginLeft: "70px",
+              marginBottom: "10px",
+              textAlign: "center",
+            }}
           >
-            Product Name
+            To
           </Typography>
 
           <TextField
             sx={{ marginLeft: "70px" }}
-            id="lname"
-            name="lname"
+            id="uid"
+            name="uid"
             type="text"
             variant="outlined"
           />
         </Box>
-
         <Box>
-          <Typography
-            variant="h3"
-            sx={{ marginLeft: "70px", marginBottom: "10px" }}
+          <Button
+            variant="contained"
+            sx={{
+              marginLeft: "80px",
+              width: "150px",
+              height: "50px",
+              marginTop: "25px",
+            }}
+            color="warning"
           >
-            Price
-          </Typography>
-
-          <TextField
-            sx={{ marginLeft: "70px" }}
-            id="fname"
-            name="fname"
-            type="text"
-            variant="outlined"
-          />
+            Search
+          </Button>
         </Box>
-
-        <Box>
-          <Typography
-            variant="h3"
-            sx={{ marginLeft: "70px", marginBottom: "10px" }}
-          >
-            Quantity
-          </Typography>
-
-          <TextField
-            sx={{ marginLeft: "70px" }}
-            id="lname"
-            name="lname"
-            type="text"
-            variant="outlined"
-          />
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "row",
-          marginTop: "40px",
-          justifyItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Button
-          variant="contained"
-          sx={{ width: "150px", height: "50px" }}
-          color="success"
-        >
-          Add
-        </Button>
-
-        <Button
-          variant="contained"
-          sx={{ marginLeft: "80px", width: "150px", height: "50px" }}
-          color="error"
-        >
-          Delete
-        </Button>
-
-        <Button
-          variant="contained"
-          sx={{ marginLeft: "80px", width: "150px", height: "50px" }}
-          color="warning"
-        >
-          Modify
-        </Button>
       </Box>
     </Box>
   );
 }
 
-Products.getLayout = function getLayout(page) {
+Sales.getLayout = function getLayout(page) {
   return <AdminLayout>{page}</AdminLayout>;
 };

@@ -19,13 +19,13 @@ export default function Users() {
     <Box sx={{ padding: "0 24px" }}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <Image
-          src="/assets/svg/users.svg"
+          src="/assets/svg/box.svg"
           alt="Dashboard Image"
           width={40}
           height={40}
         />
         <Typography variant="h1" sx={{ marginLeft: "12px" }}>
-          Users
+          Products
         </Typography>
       </Box>
       <Box
@@ -50,7 +50,7 @@ export default function Users() {
                   marginBottom: "20px",
                 }}
               >
-                Account Details
+                Product Details
               </Typography>
               <Table
                 sx={{ maxWidth: "700", border: "2px solid black" }}
@@ -59,39 +59,41 @@ export default function Users() {
               >
                 <TableHead sx={{ border: "2px solid black" }}>
                   <TableRow>
-                    <TableCell align="center"> User ID</TableCell>
-                    <TableCell align="center"> Last Name</TableCell>
-                    <TableCell align="center"> First Name</TableCell>
-                    <TableCell align="center"> User Type</TableCell>
-                    <TableCell align="center"> Email</TableCell>
+                    <TableCell align="center"> Product ID</TableCell>
+                    <TableCell align="center"> Product Name</TableCell>
+                    <TableCell align="center"> Price</TableCell>
+                    <TableCell align="center"> Quantity</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody sx={{ border: "2px solid black" }}>
                   <TableCell align="center"> 001 </TableCell>
-                  <TableCell align="center"> Francisco </TableCell>
-                  <TableCell align="center"> Dominic </TableCell>
-                  <TableCell align="center"> Admin </TableCell>
-                  <TableCell align="center">
-                    dominic.m.francisco@gmail.com
-                  </TableCell>
+                  <TableCell align="center"> Hansel </TableCell>
+                  <TableCell align="center"> 48 </TableCell>
+                  <TableCell align="center"> 30 </TableCell>
                 </TableBody>
                 <TableBody sx={{ border: "2px solid black" }}>
                   <TableCell align="center"> 002 </TableCell>
-                  <TableCell align="center"> Sanvictores </TableCell>
-                  <TableCell align="center"> Giecel Mhay </TableCell>
-                  <TableCell align="center"> Cashier </TableCell>
-                  <TableCell align="center">
-                    giecel.mhay.sanvictores@gmail.com
-                  </TableCell>
+                  <TableCell align="center"> Rebisco </TableCell>
+                  <TableCell align="center"> 48 </TableCell>
+                  <TableCell align="center"> 25 </TableCell>
+                </TableBody>
+                <TableBody sx={{ border: "2px solid black" }}>
+                  <TableCell align="center"> 003 </TableCell>
+                  <TableCell align="center"> Magic Flakes </TableCell>
+                  <TableCell align="center"> 35 </TableCell>
+                  <TableCell align="center"> 38 </TableCell>
+                </TableBody>
+                <TableBody sx={{ border: "2px solid black" }}>
+                  <TableCell align="center"> 004 </TableCell>
+                  <TableCell align="center"> Combi </TableCell>
+                  <TableCell align="center"> 45 </TableCell>
+                  <TableCell align="center"> 40 </TableCell>
                 </TableBody>
                 <TableBody>
-                  <TableCell align="center"> 003 </TableCell>
-                  <TableCell align="center"> Suares </TableCell>
-                  <TableCell align="center"> Mark Angelo </TableCell>
-                  <TableCell align="center"> Cashier </TableCell>
-                  <TableCell align="center">
-                    mark.angelo.suarez@gmail.com
-                  </TableCell>
+                  <TableCell align="center"> 005 </TableCell>
+                  <TableCell align="center"> Fita </TableCell>
+                  <TableCell align="center"> 56 </TableCell>
+                  <TableCell align="center"> 30 </TableCell>
                 </TableBody>
               </Table>
             </Paper>
@@ -99,13 +101,21 @@ export default function Users() {
         </Grid>
       </Box>
 
-      <Box sx={{ display: "flex", alignItems: "center", flexDirection: "row" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "row",
+          justifyItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Box>
           <Typography
             variant="h3"
             sx={{ marginLeft: "70px", marginBottom: "10px" }}
           >
-            User ID
+            Product ID
           </Typography>
 
           <TextField
@@ -122,7 +132,7 @@ export default function Users() {
             variant="h3"
             sx={{ marginLeft: "70px", marginBottom: "10px" }}
           >
-            Last Name
+            Product Name
           </Typography>
 
           <TextField
@@ -139,7 +149,7 @@ export default function Users() {
             variant="h3"
             sx={{ marginLeft: "70px", marginBottom: "10px" }}
           >
-            First Name
+            Price
           </Typography>
 
           <TextField
@@ -156,28 +166,11 @@ export default function Users() {
             variant="h3"
             sx={{ marginLeft: "70px", marginBottom: "10px" }}
           >
-            User Type
+            Quantity
           </Typography>
 
           <TextField
             sx={{ marginLeft: "70px" }}
-            id="lname"
-            name="lname"
-            type="text"
-            variant="outlined"
-          />
-        </Box>
-
-        <Box>
-          <Typography
-            variant="h3"
-            sx={{ marginLeft: "70px", marginBottom: "10px" }}
-          >
-            Email
-          </Typography>
-
-          <TextField
-            sx={{ marginLeft: "70px", width: "250px" }}
             id="lname"
             name="lname"
             type="text"

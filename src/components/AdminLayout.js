@@ -40,7 +40,8 @@ export default function AdminLayout({ children }) {
   return (
     <Box>
       <Head>
-        <title>Admin-Dashboard</title>
+        <title>Admin Dashboard</title>
+        <link rel="icon" href="/assets/images/MHS Logo.png" />
       </Head>
 
       <AppBar>
@@ -69,6 +70,14 @@ export default function AdminLayout({ children }) {
             flexDirection: "column",
           }}
         >
+          <Box>
+            <Image
+              src="/assets/images/MHS Logo.png"
+              alt="MHS Logo"
+              width={200}
+              height={200}
+            />
+          </Box>
           <Box sx={{ padding: "12px", display: "flex" }}>
             <Avatar />
             <Box sx={{ marginLeft: "8px" }}>
@@ -83,7 +92,11 @@ export default function AdminLayout({ children }) {
           </Box>
           <List sx={{ flexGrow: "1" }}>
             <Divider />
-            <ListItem button onClick={() => goToPage("/dashboard")} selected={router.pathname.includes("dashboard")}>
+            <ListItem
+              button
+              onClick={() => goToPage("/dashboard")}
+              selected={router.pathname.includes("dashboard")}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/dashboard.svg"
@@ -95,7 +108,11 @@ export default function AdminLayout({ children }) {
               <ListItemText primary="Dashboard" />
             </ListItem>
 
-            <ListItem button onClick={() => goToPage("/users")}  selected={router.pathname.includes("users")}>
+            <ListItem
+              button
+              onClick={() => goToPage("/users")}
+              selected={router.pathname.includes("users")}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/users.svg"
@@ -107,7 +124,11 @@ export default function AdminLayout({ children }) {
               <ListItemText primary="Users" />
             </ListItem>
 
-            <ListItem button>
+            <ListItem
+              button
+              onClick={() => goToPage("/products")}
+              selected={router.pathname.includes("products")}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/box.svg"
@@ -134,7 +155,11 @@ export default function AdminLayout({ children }) {
 
           <List>
             <Divider />
-            <ListItem button>
+            <ListItem
+              button
+              onClick={() => goToPage("/sign-in")}
+              selected={router.pathname.includes("sign-in")}
+            >
               <ListItemIcon>
                 <Image
                   src="/assets/svg/logout.svg"
